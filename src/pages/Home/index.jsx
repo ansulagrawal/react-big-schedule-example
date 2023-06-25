@@ -1,9 +1,11 @@
-import { Typography } from 'antd';
+import { Typography, Button } from 'antd';
 import './index.css';
+import { useNavigate } from 'react-router-dom';
 
 const { Title, Paragraph } = Typography;
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="home-page">
       <header>
@@ -13,9 +15,12 @@ const Home = () => {
           into your applications to effectively manage time, appointments, and resources. With drag-and-drop functionality, interactive UI, and granular views, React Big Schedule
           empowers you to effortlessly schedule and allocate resources with precision.
         </Paragraph>
+        <Button type="link" size="large"  onClick={() => navigate('/basic')}>
+          Get Started
+        </Button>
       </header>
 
-      <section>
+      {/* <section>
         <Title level={2}>Installation</Title>
         <Paragraph>To install React Big Schedule, use npm:</Paragraph>
         <pre>
@@ -48,7 +53,7 @@ const Home = () => {
         </ul>
       </section>
 
-      {/* <section>
+      <section>
         <Title level={2}>Contributions</Title>
         <Paragraph>Contributions to React Big Schedule are welcome! If you find a bug or want to contribute to the project, please follow these steps:</Paragraph>
         <ol>

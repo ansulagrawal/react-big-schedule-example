@@ -12,7 +12,7 @@ function Slider() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const activePath = pathname?.split('/')[1] || 'home';
-  return <Menu defaultSelectedKeys={[activePath]} items={items.map(i => ({ ...i, onClick: () => navigate(i.path) }))} />;
+  return <Menu selectedKeys={[activePath]} items={items.map(i => ({ ...i, onClick: () => navigate(i.path) }))} />;
 }
 
 export default Slider;
