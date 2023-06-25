@@ -1,29 +1,24 @@
-import { Col, Row, Typography, Select } from 'antd';
-import { menuItems } from '../config';
-import { useNavigate } from 'react-router-dom';
+import { Col, Row } from 'antd';
+import { Link, useNavigate } from 'react-router-dom';
+import { GithubOutlined } from '@ant-design/icons';
+import logo from '/logo.png';
+import npmLogo from '/npm.svg';
 
 function Header() {
   const navigate = useNavigate();
   return (
-    <Row align="middle" justify="space-between">
+    <Row align="middle" justify="space-between" className="header-wrapper">
       <Col span={2}>
-        <Select
-          showSearch
-          defaultValue={menuItems[0]}
-          defaultActiveFirstOption
-          options={menuItems}
-          onChange={(v, p) => navigate(p.path)}
-          filterOption={(input, option) => (option?.label ?? '').includes(input)}
-          filterSort={(optionA, optionB) => (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())}
-          style={{ width: 300 }}
-        />
+        <img src={logo} alt="Logo" onClick={() => navigate('/')} className="logo_img" />
       </Col>
       <Col>
-        <Typography.Title level={1} className="header-title">
-          React Big Scheduler
-        </Typography.Title>
+        <Link to="https://www.npmjs.com/package/react-big-schedule" target="_blank" className="npm-icon">
+          <img src={npmLogo} alt="npm-logo" />
+        </Link>
+        <Link to="https://github.com/ansulagrawal/react-big-schedule" target="_blank" className="github-icon">
+          <GithubOutlined />
+        </Link>
       </Col>
-      <Col span={2}></Col>
     </Row>
   );
 }

@@ -9,7 +9,7 @@ class Basic extends Component {
     super(props);
 
     let schedulerData = new SchedulerData('2022-12-22', ViewType.Week, false, false, {
-      besidesWidth: 20,
+      besidesWidth: window.innerWidth <= 1600 ? 100 : 350,
       dayMaxEvents: 99,
       weekMaxEvents: 9669,
       monthMaxEvents: 9669,
