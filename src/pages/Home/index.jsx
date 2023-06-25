@@ -1,13 +1,11 @@
-import { Typography, Button } from 'antd';
+import { Typography } from 'antd';
 import './index.css';
 
 const { Title, Paragraph } = Typography;
 
-
-
 const Home = () => {
   return (
-    <div className='home-page'>
+    <div className="home-page">
       <header>
         <Title level={1}>React Big Schedule</Title>
         <Paragraph>
@@ -15,9 +13,6 @@ const Home = () => {
           into your applications to effectively manage time, appointments, and resources. With drag-and-drop functionality, interactive UI, and granular views, React Big Schedule
           empowers you to effortlessly schedule and allocate resources with precision.
         </Paragraph>
-        <Button type="primary" size="large">
-          Get Started
-        </Button>
       </header>
 
       <section>
@@ -53,7 +48,7 @@ const Home = () => {
         </ul>
       </section>
 
-      <section>
+      {/* <section>
         <Title level={2}>Contributions</Title>
         <Paragraph>Contributions to React Big Schedule are welcome! If you find a bug or want to contribute to the project, please follow these steps:</Paragraph>
         <ol>
@@ -124,7 +119,7 @@ const Home = () => {
         <Paragraph>
           Please refer to the <a href="https://github.com/ansulagrawal/react-big-schedule/blob/master/CHANGELOG.md">CHANGELOG.md</a> file.
         </Paragraph>
-      </section>
+      </section> */}
     </div>
   );
 };
