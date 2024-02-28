@@ -10,6 +10,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Basic = lazy(() => import('./pages/Basic'));
 const ReadOnly = lazy(() => import('./pages/Read-Only'));
 const AddMore = lazy(() => import('./pages/Add-More'));
+const DragAndDrop = lazy(() => import('./pages/Drag-and-Drop'));
 
 function App() {
   const router = createBrowserRouter([
@@ -46,6 +47,14 @@ function App() {
           element: (
             <Suspense fallback={<Fallback />}>
               <AddMore />
+            </Suspense>
+          ),
+        },
+        {
+          path: 'drag-and-drop',
+          element: (
+            <Suspense fallback={<Fallback />}>
+              <DragAndDrop />
             </Suspense>
           ),
         },
