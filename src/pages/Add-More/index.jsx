@@ -11,20 +11,20 @@ function AddMore() {
 
   const items = [
     {
-      key: 'functional-based',
-      label: 'Function',
-      children: (
-        <Suspense fallback={<Fallback />}>
-          <FunctionalComponent />
-        </Suspense>
-      ),
-    },
-    {
       key: 'class-based',
       label: 'Class',
       children: (
         <Suspense fallback={<Fallback />}>
           <ClassBasedComponent />
+        </Suspense>
+      ),
+    },
+    {
+      key: 'functional-based',
+      label: 'Function',
+      children: (
+        <Suspense fallback={<Fallback />}>
+          <FunctionalComponent />
         </Suspense>
       ),
     },
