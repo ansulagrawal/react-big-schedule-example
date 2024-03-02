@@ -1,12 +1,12 @@
 import { Suspense, lazy, useState } from 'react';
 import { Typography, Row, Tabs } from 'antd';
-// import SourceCode from '../../components/SourceCode';
+import SourceCode from '../../components/SourceCode';
 import Fallback from '../../components/Fallback';
 
 const FunctionalComponent = lazy(() => import('./functional-based'));
 const ClassBasedComponent = lazy(() => import('./class-based'));
 
-function AddMore() {
+function DragAndDrop() {
   const [type, setType] = useState('class-based');
 
   const items = [
@@ -34,10 +34,10 @@ function AddMore() {
       <Row align='middle' justify='center'>
         <Typography.Title level={2}> Drag and Drop Example</Typography.Title>
       </Row>
-      {/* <SourceCode value={`https://github.com/ansulagrawal/react-big-schedule/blob/master/src/examples/Add-More/${type}.jsx`} /> */}
+      <SourceCode value={`https://github.com/react-scheduler/react-big-schedule-example/blob/master/src/pages/Drag-and-Drop/${type}.jsx`} />
       <Tabs activeKey={type} items={items} onChange={setType} />
     </>
   );
 }
 
-export default AddMore;
+export default DragAndDrop;
