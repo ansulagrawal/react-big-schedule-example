@@ -1,11 +1,11 @@
+import { Col, Row, Typography } from 'antd';
 import { Component } from 'react';
-import { Scheduler, SchedulerData, ViewType, DemoData, wrapperFun, DnDSource } from 'react-big-schedule';
-import TaskItem from '../../components/TaskItem';
-import { DnDTypes } from '../../helpers/DnDTypes';
+import { DemoData, DnDSource, Scheduler, SchedulerData, ViewType, wrapperFun } from 'react-big-schedule';
 import ResourceItem from '../../components/ResourceItem';
 import ResourceList from '../../components/ResourceList';
+import TaskItem from '../../components/TaskItem';
 import TaskList from '../../components/TaskList';
-import { Col, Row, Typography } from 'antd';
+import { DnDTypes } from '../../helpers/DnDTypes';
 
 class DragAndDrop extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class DragAndDrop extends Component {
 
     let schedulerData = new SchedulerData('2022-12-18', ViewType.Month, false, false, {
       schedulerMaxHeight: 500,
-      besidesWidth: window.innerWidth <= 1600 ? 100 : 500,
+      besidesWidth: window.innerWidth <= 1600 ? 400 : 500,
       views: [
         { viewName: 'Agenda View', viewType: ViewType.Month, showAgenda: true, isEventPerspective: false },
         { viewName: 'Resource View', viewType: ViewType.Month, showAgenda: false, isEventPerspective: false },
